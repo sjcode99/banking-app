@@ -3,6 +3,7 @@ import Navbar from "../navbar/Navbar";
 import axios from "axios";
 import Dialogform from "./Dialogform";
 import "../App.css"
+import Footer from "../footer/Footer";
 // import logo from "../assets/logo.jpg";
 
 const ListCustomer = () => {
@@ -23,6 +24,7 @@ const ListCustomer = () => {
     <Fragment>
       {/* header */}
       <Navbar />
+      
       <div className="container">
         <h1 style={{marginTop: '1rem'}}>Transfer Money</h1>
         <br />
@@ -79,6 +81,8 @@ const ListCustomer = () => {
           </div>
         </div>
       </div>
+
+      <Footer />
     </Fragment>
   );
 };

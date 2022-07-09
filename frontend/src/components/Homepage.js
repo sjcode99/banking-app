@@ -1,6 +1,5 @@
 import React from "react";
 import Footer from "../footer/Footer";
-import "../img/bank.jpg";
 import Navbar from "../navbar/Navbar";
 
 const Homepage = () => {
@@ -28,13 +27,13 @@ const Homepage = () => {
                 </button>
               </a>
             </li>
-            <li className="operations">
+            {/* <li className="operations">
               <a>
                 <button className="btn" id="blue">
                   Transfer Money
                 </button>
               </a>
-            </li>
+            </li> */}
             <li className="operations">
               <a>
                 <button

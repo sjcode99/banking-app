@@ -29,17 +29,17 @@ function Navbar() {
           >
             <ul className="navbar-nav">
               <li className="nav-item btn btn-secondary">
-                <a className="nav-link text-white" href="">
+                <a className="nav-link text-white" onClick={() => window.location = "/"}>
                   Home
                 </a>
               </li>
               <li className="nav-item btn btn-secondary">
-                <a className="nav-link link-text text-white" href="">
+                <a className="nav-link link-text text-white">
                   About Me
                 </a>
               </li>
               <li className="nav-item btn btn-secondary">
-                <a className="nav-link link-text text-white" href="">
+                <a className="nav-link link-text text-white">
                   Contact me
                 </a>
               </li>

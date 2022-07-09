@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { Fragment, useEffect, useState } from "react";
+import Footer from "../footer/Footer";
 import Navbar from "../navbar/Navbar";
-// import logo from "../assets/logo.jpg";
 
 const TransactionHistory = () => {
   const [Data, setData] = useState([]);
@@ -56,6 +56,8 @@ const TransactionHistory = () => {
           </table>
         </div>
       </div>
+
+      <Footer />
     </Fragment>
   );
 };
