@@ -9,20 +9,22 @@ import Typography from "@mui/material/Typography";
 import Dialog from "@mui/material/Dialog";
 import FormControl from "@mui/material/FormControl";
 import InputLabel from "@mui/material/InputLabel";
+import { useToasts } from "react-toast-notifications";
 
 import image from "../img/pic.png";
 import "../App.css";
 import axios from "axios";
 
 function Dialogform({ data, fromCustomer }) {
+  const { addToast } = useToasts();
   const [showDialog, setshowDialog] = useState(false);
   const [inputData, setinputData] = useState({
-    toAccount: '',
-    amount: '',
+    toAccount: "",
+    amount: "",
   });
   const openDialog = () => setshowDialog(true);
   const closeDialog = () => setshowDialog(false);
-  const postUrl = "http://localhost:4000/customers/"
+  const postUrl = "http://localhost:4000/customers/";
 
   const handleData = (e) => {
     const value = e.target.value;
@@ -31,18 +33,33 @@ function Dialogform({ data, fromCustomer }) {
     setinputData({ ...inputData, [keyName]: value });
   };
 
-  // console.log(inputData);
-  const updateDatabase = (d) => {
-    // console.log(inputData);
-    d.preventDefault();
-    axios
-      .post(`${postUrl}${fromCustomer.accountNo}`, {
-        receiver: inputData.toAccount,
-        amount: inputData.amount,
-      })
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err))
-      window.location = "/customers";
+  // console.log(fromCustomer);
+  const updateDatabase = (event, d) => {
+    // console.log(d);
+    if (parseInt(d.balance) > parseInt(inputData.amount)) {
+      // console.log(inputData);
+      event.preventDefault();
+      axios
+        .post(`${postUrl}${fromCustomer.accountNo}`, {
+          receiver: inputData.toAccount,
+          amount: inputData.amount,
+        })
+        .then((res) =>
+          addToast("Amount transferred successfully!!", {
+            appearance: "success",
+            autoDismiss: true,
+          })
+        )
+        .catch((err) => console.log(err));
+        closeDialog();
+      //  window.location = "/customers";
+    } else {
+      addToast("Please enter correct amount!", {
+        appearance: "error",
+        autoDismiss: true,
+      });
+      closeDialog();
+    }
   };
 
   return (
@@ -109,7 +126,7 @@ function Dialogform({ data, fromCustomer }) {
             <Button
               variant="contained"
               color="secondary"
-              onClick={(d) => updateDatabase(d)}
+              onClick={(event) => updateDatabase(event, fromCustomer)}
             >
               Confirm
             </Button>

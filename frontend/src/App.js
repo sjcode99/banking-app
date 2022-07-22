@@ -7,9 +7,11 @@ import {
 import Homepage from "./components/Homepage";
 import ListCustomer from "./components/ListCustomer";
 import TransactionHistory from "./components/TransactionHistory";
+// import { ToastProvider } from "react-toast-notifications";
 
 function App() {
   return (
+    // <ToastProvider>
     <Router>
       <Routes>
         <Route path="/"  element={<Homepage/>} />
@@ -17,6 +19,7 @@ function App() {
         <Route path="/transactions" element={<TransactionHistory />} />
       </Routes>
     </Router>
+    // </ToastProvider>
   );
 }
 

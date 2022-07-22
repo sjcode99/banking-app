@@ -9,7 +9,6 @@ const Homepage = () => {
       <Navbar />
 
       {/* body */}
-      <h1>Welcome to Sparks Bank</h1>
 
       <div className="bg">
         <div className="center">

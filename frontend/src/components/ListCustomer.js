@@ -4,6 +4,7 @@ import axios from "axios";
 import Dialogform from "./Dialogform";
 import "../App.css"
 import Footer from "../footer/Footer";
+import { ToastProvider } from "react-toast-notifications";
 // import logo from "../assets/logo.jpg";
 
 const ListCustomer = () => {
@@ -18,10 +19,11 @@ const ListCustomer = () => {
         // console.log(response.data);
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, [Data]);
 
   return (
     <Fragment>
+      <ToastProvider>
       {/* header */}
       <Navbar />
       
@@ -83,6 +85,7 @@ const ListCustomer = () => {
       </div>
 
       <Footer />
+      </ToastProvider>
     </Fragment>
   );
 };
