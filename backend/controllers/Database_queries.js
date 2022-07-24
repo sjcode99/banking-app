@@ -1,5 +1,5 @@
 const Customers = require("../models/Customers.js");
-const transaction = require("../models/transaction_history.js");
+const transaction = require("../models/Transaction_histories.js");
 
 // get home page
 exports.getHomepage = (req, res) => {
