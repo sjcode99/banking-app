@@ -8,4 +8,4 @@ const transactionSchema = mongoose.Schema({
   date: Date,
 });
 
-module.exports = mongoose.model("Transaction_history", transactionSchema);
+module.exports = mongoose.model("Transaction_histories", transactionSchema);
