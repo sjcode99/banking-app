@@ -31,7 +31,7 @@ const TransactionHistory = () => {
         <br />
         <div className="table-responsive-sm">
           <table className="table table-hover table-striped table-condensed table-bordered">
-            <thead>
+            <thead style={{ textAlign: "center" }}>
               <tr>
                 <th className="text-center">S.No.</th>
                 <th className="text-center">Sender</th>

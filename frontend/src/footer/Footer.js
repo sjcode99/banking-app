@@ -5,8 +5,9 @@ function Footer() {
     <div>
       <div id="container">
         <div id="header">
-          © 2022. Made by Suraj lal <br />
-          For the Project of The Sparks Foundation
+          Copyright © 2022.
+          <p>Made by Suraj lal </p>
+          <br />
         </div>
       </div>
     </div>
