@@ -5,7 +5,9 @@ import Navbar from "../navbar/Navbar";
 
 const TransactionHistory = () => {
   const [Data, setData] = useState([]);
-  const fetchUrl = "http://localhost:4000/getTransactions"
+
+  // const fetchUrl = "http://localhost:4000/getTransactions"
+  const fetchUrl = "https://bankapp004.herokuapp.com/getTransactions"
 
   useEffect(() => {
     axios

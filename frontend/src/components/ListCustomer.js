@@ -10,7 +10,8 @@ import { ToastProvider } from "react-toast-notifications";
 const ListCustomer = () => {
   const [Data, setData] = useState([]);
 
-  const fetchUrl = "http://localhost:4000/getCustomers";
+  // const fetchUrl = "http://localhost:4000/getCustomers";
+  const fetchUrl = "https://bankapp004.herokuapp.com/getCustomers";
 
   useEffect(() => {
     axios(fetchUrl)

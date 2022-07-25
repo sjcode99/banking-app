@@ -24,7 +24,9 @@ function Dialogform({ data, fromCustomer }) {
   });
   const openDialog = () => setshowDialog(true);
   const closeDialog = () => setshowDialog(false);
-  const postUrl = "http://localhost:4000/customers/";
+
+  // const postUrl = "http://localhost:4000/customers/";
+  const postUrl = "https://bankapp004.herokuapp.com/customers";
 
   const handleData = (e) => {
     const value = e.target.value;
