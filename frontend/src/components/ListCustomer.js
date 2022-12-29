@@ -11,7 +11,7 @@ const ListCustomer = () => {
   const [Data, setData] = useState([]);
 
   // const fetchUrl = "http://localhost:4000/getCustomers";
-  const fetchUrl = "https://bankapp004.herokuapp.com/getCustomers";
+  const fetchUrl = "https://bank-app-3n1n.onrender.com/getCustomers";
 
   useEffect(() => {
     axios(fetchUrl)

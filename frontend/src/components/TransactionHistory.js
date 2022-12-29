@@ -7,7 +7,7 @@ const TransactionHistory = () => {
   const [Data, setData] = useState([]);
 
   // const fetchUrl = "http://localhost:4000/getTransactions"
-  const fetchUrl = "https://bankapp004.herokuapp.com/getTransactions"
+  const fetchUrl = "https://bank-app-3n1n.onrender.com/getTransactions"
 
   useEffect(() => {
     axios
